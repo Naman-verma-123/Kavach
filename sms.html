@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Kavach SMS Protection</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="sms-page">
+
+<header class="sms-header">
+
+    <a
+            href="menu.html"
+            class="back-button"
+            aria-label="Return to Main Menu">
+
+        &#8592;
+    </a>
+
+    <div class="header-content">
+
+        <h1 data-i18n="smsProtection">
+            SMS Protection
+        </h1>
+
+        <p data-i18n="smsHeaderDescription">
+            Automatic protection from risky messages
+        </p>
+
+    </div>
+
+</header>
+
+<main class="sms-container">
+
+    <!-- Protection status -->
+
+    <section
+            id="smsStatusCard"
+            class="protection-status permission-needed">
+
+        <div class="status-icon">
+            !
+        </div>
+
+        <div class="status-content">
+
+            <p
+                    class="status-label"
+                    data-i18n="protectionStatus">
+
+                PROTECTION STATUS
+            </p>
+
+            <h2
+                    id="smsStatusTitle"
+                    data-i18n="permissionRequired">
+
+                Permission required
+            </h2>
+
+            <p
+                    id="smsStatusDescription"
+                    data-i18n="permissionRequiredDescription">
+
+                Allow SMS access so Kavach can check new incoming messages.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Enable protection -->
+
+    <section
+            id="smsPermissionSection"
+            class="sms-card permission-card">
+
+        <div class="card-heading">
+
+            <div class="card-icon permission-icon">
+                ✓
+            </div>
+
+            <div>
+                <h2 data-i18n="enableSmsProtection">
+                    Enable SMS Protection
+                </h2>
+
+                <p data-i18n="enableSmsDescription">
+                    Kavach needs permission to detect new incoming SMS messages.
+                </p>
+            </div>
+
+        </div>
+
+        <button
+                id="enableSmsPermissionButton"
+                class="primary-button"
+                type="button"
+                data-i18n="allowSmsPermission">
+
+            Allow SMS Permission
+        </button>
+
+        <p
+                class="privacy-note"
+                data-i18n="smsPrivacyNote">
+
+            Kavach checks messages only to identify possible scam risks.
+        </p>
+
+    </section>
+
+    <!-- How protection works -->
+
+    <section class="sms-card">
+
+        <div class="section-heading">
+
+            <h2 data-i18n="howProtectionWorks">
+                How protection works
+            </h2>
+
+            <p data-i18n="howProtectionWorksDescription">
+                Kavach checks new messages in three simple steps.
+            </p>
+
+        </div>
+
+        <div class="protection-step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div>
+                <h3 data-i18n="detectMessage">
+                    Detect message
+                </h3>
+
+                <p data-i18n="detectMessageDescription">
+                    Kavach detects a newly received SMS automatically.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="protection-step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div>
+                <h3 data-i18n="checkRisk">
+                    Check risk
+                </h3>
+
+                <p data-i18n="checkRiskDescription">
+                    The message is checked for links, urgency and scam patterns.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="protection-step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div>
+                <h3 data-i18n="showWarning">
+                    Show warning
+                </h3>
+
+                <p data-i18n="showWarningDescription">
+                    Kavach displays a clear warning when danger is detected.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Latest SMS result -->
+
+    <section class="sms-card">
+
+        <div class="section-heading result-heading">
+
+            <div>
+                <h2 data-i18n="latestSmsResult">
+                    Latest SMS Result
+                </h2>
+
+                <p data-i18n="latestSmsDescription">
+                    Your most recently checked SMS will appear here.
+                </p>
+            </div>
+
+            <span
+                    id="latestResultStatus"
+                    class="result-chip no-result"
+                    data-i18n="noResult">
+
+                No result
+            </span>
+
+        </div>
+
+        <!-- Display this before an SMS is detected -->
+
+        <div
+                id="emptySmsState"
+                class="empty-state">
+
+            <div class="empty-icon">
+                SMS
+            </div>
+
+            <h3 data-i18n="waitingForSms">
+                Waiting for a new SMS
+            </h3>
+
+            <p data-i18n="waitingForSmsDescription">
+                When a new message arrives, Kavach will show its risk result here.
+            </p>
+
+        </div>
+
+        <!-- Kotlin/JavaScript can fill this later -->
+
+        <div
+                id="latestSmsResult"
+                class="latest-result hidden">
+
+            <div class="message-information">
+
+                <p
+                        class="small-label"
+                        data-i18n="sender">
+
+                    SENDER
+                </p>
+
+                <h3 id="smsSender">
+                    Unknown sender
+                </h3>
+
+                <p
+                        id="smsTime"
+                        class="sms-time">
+
+                    Just now
+                </p>
+
+            </div>
+
+            <div class="result-information">
+
+                <p
+                        class="small-label"
+                        data-i18n="riskResult">
+
+                    RISK RESULT
+                </p>
+
+                <h3 id="riskLevel">
+                    Suspicious
+                </h3>
+
+                <p id="riskReason">
+                    This message may contain risky content.
+                </p>
+
+            </div>
+
+            <a
+                    href="result.html"
+                    class="secondary-button"
+                    data-i18n="viewFullResult">
+
+                View Full Result
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Safety reminder -->
+
+    <section class="sms-safety-note">
+
+        <div class="safety-icon">
+            !
+        </div>
+
+        <div>
+
+            <h2 data-i18n="remember">
+                Remember
+            </h2>
+
+            <p data-i18n="smsSafetyMessage">
+                Do not click unknown links or share your OTP, PIN, password or CVV.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+   <script src="js/sms.js"></script>
+
+</body>
+
+</html>
