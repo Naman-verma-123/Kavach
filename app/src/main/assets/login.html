@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Welcome to Kavach</title>
+
+    <link rel="stylesheet" href="css/login.css?v=1">
+
+</head>
+
+
+<body class="login-page">
+
+
+<!-- Header -->
+
+<header class="login-header">
+
+    <div class="login-logo">
+        K
+    </div>
+
+    <div class="login-brand">
+
+        <h1>Kavach</h1>
+
+        <p>
+            Digital safety, made simple
+        </p>
+
+    </div>
+
+    <select
+            id="languageSelect"
+            class="language-select"
+            aria-label="Application language">
+
+        <option value="en">EN</option>
+        <option value="hi">हिं</option>
+
+    </select>
+
+</header>
+
+
+<main class="login-main">
+
+
+    <!-- Progress -->
+
+    <section class="progress-card">
+
+        <div
+                id="phoneProgress"
+                class="progress-step active">
+
+            <span>1</span>
+            <small>Phone</small>
+
+        </div>
+
+        <div
+                id="phoneOtpLine"
+                class="progress-line">
+
+        </div>
+
+        <div
+                id="otpProgress"
+                class="progress-step">
+
+            <span>2</span>
+            <small>OTP</small>
+
+        </div>
+
+        <div
+                id="otpContactLine"
+                class="progress-line">
+
+        </div>
+
+        <div
+                id="contactProgress"
+                class="progress-step">
+
+            <span>3</span>
+            <small>Contact</small>
+
+        </div>
+
+    </section>
+
+
+    <!-- Phone number step -->
+
+    <section
+            id="phoneStep"
+            class="login-card login-step active-step">
+
+        <div class="step-icon phone-icon">
+            ☎
+        </div>
+
+        <p class="small-heading">
+            SECURE SIGN IN
+        </p>
+
+        <h2>
+            Welcome to Kavach
+        </h2>
+
+        <p class="step-description">
+            Enter your mobile number. Firebase will verify it using a one-time password.
+        </p>
+
+
+        <form id="phoneForm" novalidate>
+
+            <label for="phoneNumber">
+                Mobile number
+            </label>
+
+            <div class="phone-input">
+
+                <span class="country-code">
+                    +91
+                </span>
+
+                <input
+                        id="phoneNumber"
+                        type="tel"
+                        inputmode="numeric"
+                        maxlength="10"
+                        autocomplete="tel"
+                        placeholder="Enter 10-digit number">
+
+            </div>
+
+            <p
+                    id="phoneError"
+                    class="error-message"
+                    aria-live="polite">
+
+            </p>
+
+
+            <button
+                    id="sendOtpButton"
+                    class="primary-button"
+                    type="submit">
+
+                <span>
+                    Send OTP
+                </span>
+
+                <span class="button-icon">
+                    →
+                </span>
+
+            </button>
+
+            <p
+                    id="phoneStatus"
+                    class="status-message"
+                    aria-live="polite">
+
+            </p>
+
+        </form>
+
+
+        <div class="security-note">
+
+            <span>
+                ✓
+            </span>
+
+            <p>
+                Your number is used only for account verification and Kavach safety features.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- OTP step -->
+
+    <section
+            id="otpStep"
+            class="login-card login-step"
+            aria-hidden="true">
+
+        <button
+                id="changeNumberButton"
+                class="change-number-button"
+                type="button">
+
+            ← Change number
+        </button>
+
+
+        <div class="step-icon otp-icon">
+            #
+        </div>
+
+        <p class="small-heading">
+            VERIFY NUMBER
+        </p>
+
+        <h2>
+            Enter the 6-digit OTP
+        </h2>
+
+        <p class="step-description">
+
+            A verification code was sent to
+
+            <strong id="otpPhoneDisplay">
+                +91 ••••••0000
+            </strong>
+
+        </p>
+
+
+        <form id="otpForm" novalidate>
+
+            <label for="otpNumber">
+                Verification code
+            </label>
+
+            <input
+                    id="otpNumber"
+                    class="otp-input"
+                    type="tel"
+                    inputmode="numeric"
+                    maxlength="6"
+                    autocomplete="one-time-code"
+                    placeholder="• • • • • •">
+
+            <p
+                    id="otpError"
+                    class="error-message"
+                    aria-live="polite">
+
+            </p>
+
+
+            <button
+                    id="verifyOtpButton"
+                    class="primary-button"
+                    type="submit">
+
+                <span>
+                    Verify OTP
+                </span>
+
+                <span class="button-icon">
+                    →
+                </span>
+
+            </button>
+
+            <p
+                    id="otpStatus"
+                    class="status-message"
+                    aria-live="polite">
+
+            </p>
+
+        </form>
+
+
+        <div class="resend-section">
+
+            <p>
+                Didn’t receive the OTP?
+            </p>
+
+            <button
+                    id="resendOtpButton"
+                    type="button"
+                    disabled>
+
+                Resend in 30s
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Trusted-contact step -->
+
+    <section
+            id="contactStep"
+            class="login-card login-step"
+            aria-hidden="true">
+
+        <div class="step-icon contact-icon">
+            TC
+        </div>
+
+        <p class="small-heading">
+            FINAL SAFETY STEP
+        </p>
+
+        <h2>
+            Add a trusted contact
+        </h2>
+
+        <p class="step-description">
+            Kavach can alert this person when a high-risk message is detected.
+        </p>
+
+
+        <form id="contactForm" novalidate>
+
+
+            <!-- Contact name -->
+
+            <label for="contactName">
+                Contact name
+            </label>
+
+            <div class="normal-input">
+
+                <span>
+                    U
+                </span>
+
+                <input
+                        id="contactName"
+                        type="text"
+                        maxlength="50"
+                        autocomplete="name"
+                        placeholder="For example, Rajesh Kumar">
+
+            </div>
+
+            <p
+                    id="contactNameError"
+                    class="error-message"
+                    aria-live="polite">
+
+            </p>
+
+
+            <!-- Contact mobile number -->
+
+            <label for="contactPhone">
+                Contact mobile number
+            </label>
+
+            <div class="phone-input">
+
+                <span class="country-code">
+                    +91
+                </span>
+
+                <input
+                        id="contactPhone"
+                        type="tel"
+                        inputmode="numeric"
+                        maxlength="10"
+                        autocomplete="tel"
+                        placeholder="Enter 10-digit number">
+
+            </div>
+
+            <p class="field-help">
+                The trusted-contact number must be different from your own number.
+            </p>
+
+            <p
+                    id="contactPhoneError"
+                    class="error-message"
+                    aria-live="polite">
+
+            </p>
+
+
+            <!-- Alert permission -->
+
+            <label class="consent-card">
+
+                <input
+                        id="alertConsent"
+                        type="checkbox">
+
+                <span class="custom-checkbox">
+                    ✓
+                </span>
+
+                <span class="consent-content">
+
+                    <strong>
+                        Allow high-risk alerts
+                    </strong>
+
+                    <small>
+                        I allow Kavach to alert this contact when a high-risk message is detected.
+                    </small>
+
+                </span>
+
+            </label>
+
+            <p
+                    id="consentError"
+                    class="error-message"
+                    aria-live="polite">
+
+            </p>
+
+
+            <button
+                    id="completeSetupButton"
+                    class="primary-button"
+                    type="submit">
+
+                <span>
+                    Complete Setup
+                </span>
+
+                <span class="button-icon">
+                    ✓
+                </span>
+
+            </button>
+
+            <p
+                    id="contactStatus"
+                    class="status-message"
+                    aria-live="polite">
+
+            </p>
+
+        </form>
+
+
+        <div class="security-note">
+
+            <span>
+                ✓
+            </span>
+
+            <p>
+                Alerts never include an OTP, PIN, password, CVV or complete private message.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer class="login-footer">
+
+    <p>
+        Kavach • Built by DSA Files
+    </p>
+
+</footer>
+
+
+<script src="js/login.js"></script>
+
+
+</body>
+
+</html>
