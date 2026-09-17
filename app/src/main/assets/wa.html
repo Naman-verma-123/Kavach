@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Kavach WhatsApp Check</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="whatsapp-page">
+
+<header class="whatsapp-header">
+
+    <a
+            href="menu.html"
+            class="back-button"
+            aria-label="Return to Main Menu">
+
+        &#8592;
+    </a>
+
+    <div class="header-content">
+
+        <h1 data-i18n="whatsappCheck">
+            WhatsApp Check
+        </h1>
+
+        <p data-i18n="whatsappHeaderDescription">
+            Check a suspicious message before responding
+        </p>
+
+    </div>
+
+</header>
+
+<main class="whatsapp-container">
+
+    <!-- Privacy information -->
+
+    <section class="privacy-card">
+
+        <div class="privacy-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <h2 data-i18n="yourChatsStayPrivate">
+                Your chats stay private
+            </h2>
+
+            <p data-i18n="whatsappPrivacyDescription">
+                Kavach cannot open or read your WhatsApp chats. You decide which message to copy and check.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Instructions -->
+
+    <section class="whatsapp-card">
+
+        <div class="section-heading">
+
+            <div class="section-icon">
+                WA
+            </div>
+
+            <div>
+
+                <h2 data-i18n="howToCheckMessage">
+                    How to check a message
+                </h2>
+
+                <p data-i18n="followSimpleSteps">
+                    Follow these three simple steps
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="instruction-list">
+
+            <div class="instruction-row">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div>
+                    <h3 data-i18n="copyMessage">
+                        Copy the message
+                    </h3>
+
+                    <p data-i18n="copyMessageDescription">
+                        Press and hold the suspicious message in WhatsApp, then tap Copy.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="instruction-row">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <div>
+                    <h3 data-i18n="pasteMessage">
+                        Paste it in Kavach
+                    </h3>
+
+                    <p data-i18n="pasteMessageDescription">
+                        Paste the copied message into the box below.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="instruction-row">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <div>
+                    <h3 data-i18n="checkRisk">
+                        Check the risk
+                    </h3>
+
+                    <p data-i18n="checkRiskDescription">
+                        Kavach will show the risk level, reasons and recommended action.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Message input -->
+
+    <section class="whatsapp-card message-card">
+
+        <div class="message-heading">
+
+            <div>
+
+                <h2 data-i18n="pasteWhatsAppMessage">
+                    Paste WhatsApp Message
+                </h2>
+
+                <p data-i18n="pasteOnlyMessage">
+                    Paste only the message you want Kavach to check.
+                </p>
+
+            </div>
+
+            <button
+                    id="clearMessageButton"
+                    class="clear-button"
+                    type="button"
+                    data-i18n="clear">
+
+                Clear
+            </button>
+
+        </div>
+
+        <label
+                for="messageInput"
+                data-i18n="messageToCheck">
+
+            Message to check
+        </label>
+
+        <textarea
+                id="messageInput"
+                rows="9"
+                maxlength="3000"
+                placeholder="Paste the suspicious WhatsApp message here..."></textarea>
+
+        <div class="input-information">
+
+            <p
+                    id="messageError"
+                    class="error-message"
+                    aria-live="polite">
+
+            </p>
+
+            <p class="character-count">
+                <span id="characterCount">0</span>/3000
+            </p>
+
+        </div>
+
+        <button
+                id="pasteMessageButton"
+                class="paste-button"
+                type="button">
+
+            <span class="button-symbol">
+                +
+            </span>
+
+            <span data-i18n="pasteCopiedMessage">
+                Paste Copied Message
+            </span>
+
+        </button>
+
+        <button
+                id="checkMessageButton"
+                class="check-button"
+                type="button">
+
+            <span class="button-symbol">
+                ✓
+            </span>
+
+            <span data-i18n="checkMessage">
+                Check Message
+            </span>
+
+        </button>
+
+    </section>
+
+    <!-- What Kavach checks -->
+
+    <section class="whatsapp-card">
+
+        <div class="section-heading compact-heading">
+
+            <div class="check-shield">
+                K
+            </div>
+
+            <div>
+
+                <h2 data-i18n="whatKavachChecks">
+                    What Kavach checks
+                </h2>
+
+                <p data-i18n="riskPatternsDescription">
+                    Common patterns found in online scams
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="risk-tags">
+
+            <span data-i18n="unknownLinks">
+                Unknown links
+            </span>
+
+            <span data-i18n="urgentRequests">
+                Urgent requests
+            </span>
+
+            <span data-i18n="otpRequests">
+                OTP requests
+            </span>
+
+            <span data-i18n="paymentPressure">
+                Payment pressure
+            </span>
+
+            <span data-i18n="fakePrizes">
+                Fake prizes
+            </span>
+
+            <span data-i18n="accountThreats">
+                Account threats
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Safety note -->
+
+    <section class="safety-note">
+
+        <div class="safety-icon">
+            !
+        </div>
+
+        <div>
+
+            <h2 data-i18n="important">
+                Important
+            </h2>
+
+            <p data-i18n="whatsappSafetyMessage">
+                Do not click a suspicious link or send money while Kavach is checking the message.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+<script src="js/wa.js"></script>
+
+</body>
+
+</html>
