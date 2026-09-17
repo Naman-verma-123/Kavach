@@ -1,2 +1,0 @@
-# Kavach
-Cybersecurity for people
