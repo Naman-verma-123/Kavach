@@ -1,0 +1,39 @@
+{
+  "language": "English",
+  "reasons": {
+    "URGENCY_LANGUAGE": "This message uses urgent, pressuring language to rush you into acting quickly.",
+    "THREAT_OF_ACCOUNT_BLOCK": "This message threatens that your account, card or SIM will be blocked if you don't act immediately.",
+    "BANK_IMPERSONATION": "This message pretends to be from your bank.",
+    "GOVT_AUTHORITY_IMPERSONATION": "This message pretends to be from police, income tax, or another government authority.",
+    "COURIER_LOGISTICS_IMPERSONATION": "This message pretends to be about a courier or parcel delivery.",
+    "UTILITY_IMPERSONATION": "This message pretends to be about your electricity or gas connection.",
+    "OTP_OR_PIN_REQUEST": "This message asks you to share an OTP, PIN or CVV. No genuine bank or company ever asks for this.",
+    "KYC_UPDATE_SCAM": "This message asks you to urgently update your KYC through a link.",
+    "SUSPICIOUS_SHORTENED_LINK": "This message contains a shortened link that hides the real website address.",
+    "SUSPICIOUS_IP_LINK": "This message contains a link that points to a raw numeric address instead of a normal website name.",
+    "SUSPICIOUS_DOMAIN_MISMATCH": "This message names a bank or authority, but the link does not go to that organisation's official website.",
+    "LOTTERY_OR_PRIZE_SCAM": "This message claims you have won a lottery, lucky draw or prize.",
+    "JOB_OR_WORK_FROM_HOME_SCAM": "This message offers an easy work-from-home job with unusually high daily earnings.",
+    "LOAN_OR_CREDIT_SCAM": "This message offers an instant loan with no paperwork.",
+    "INSURANCE_POLICY_SCAM": "This message claims there is a pending bonus or maturity amount on an insurance policy.",
+    "FAMILY_EMERGENCY_MONEY_REQUEST": "This message claims to be a family member in an emergency, asking for money urgently.",
+    "REQUEST_FOR_PAYMENT_OR_UPI": "This message asks you to pay money or scan a QR code.",
+    "UNKNOWN_SENDER_MASS_MESSAGE": "This message was sent from a short bulk-messaging ID rather than a normal phone number.",
+    "NO_RISK_INDICATORS": "No known scam patterns were found in this message.",
+    "AI_SEMANTIC_SCAM_PATTERN": "Our AI reviewed the wording of this message and found it matches common scam patterns."
+  },
+  "recommendations": {
+    "SAFE": "This message does not show signs of a common scam. Still, never share your OTP, PIN or bank details with anyone.",
+    "LOW": "Be a little careful. Do not click any link or share personal details until you are sure who sent this.",
+    "MEDIUM": "This message looks suspicious. Do not click any link, do not share any OTP or bank details, and check with your trusted contact before acting.",
+    "HIGH": "This message is likely a scam. Do not click the link, do not call back, and do not share any information. Talk to your trusted contact now.",
+    "CRITICAL": "This message is dangerous. Do not click, do not call, do not pay or share any details. Kavach is alerting your trusted contact."
+  },
+  "levels": {
+    "SAFE": "Safe",
+    "LOW": "Low Risk",
+    "MEDIUM": "Medium Risk",
+    "HIGH": "High Risk",
+    "CRITICAL": "Dangerous"
+  }
+}
