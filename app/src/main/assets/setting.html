@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Kavach Settings</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="settings-page">
+
+<header class="settings-header">
+
+    <a
+            href="menu.html"
+            class="back-button"
+            aria-label="Return to Main Menu">
+
+        &#8592;
+    </a>
+
+    <div class="settings-heading">
+        <h1 data-i18n="settingsTitle">Settings</h1>
+        <p>Manage your language, permissions and account</p>
+    </div>
+
+</header>
+
+<main class="settings-container">
+
+    <!-- Language -->
+
+    <section class="settings-section">
+
+        <div class="section-title">
+
+            <div class="section-icon language-icon">
+                A
+            </div>
+
+            <div>
+                <h2>Application Language</h2>
+                <p>Choose the language you understand best</p>
+            </div>
+
+        </div>
+
+        <div class="language-control">
+
+            <label for="languageSelect">
+                Selected language
+            </label>
+
+            <select id="languageSelect" name="language">
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="hi">
+                    हिन्दी — Hindi
+                </option>
+
+            </select>
+
+            <button
+                    id="saveLanguageButton"
+                    class="primary-settings-button"
+                    type="button">
+
+                Apply Language
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Protection and permissions -->
+
+    <section class="settings-section">
+
+        <div class="section-title">
+
+            <div class="section-icon permission-icon">
+                ✓
+            </div>
+
+            <div>
+                <h2>Protection and Permissions</h2>
+                <p>Permissions required for Kavach protection</p>
+            </div>
+
+        </div>
+
+        <!-- SMS permission -->
+
+        <div class="setting-row">
+
+            <div class="setting-information">
+                <h3>SMS Protection</h3>
+                <p>Detect and check new incoming SMS messages</p>
+            </div>
+
+            <div class="setting-action">
+
+                <span
+                        id="smsPermissionStatus"
+                        class="status-chip status-required">
+
+                    Required
+                </span>
+
+                <button
+                        id="smsPermissionButton"
+                        class="small-settings-button"
+                        type="button">
+
+                    Allow
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Notification permission -->
+
+        <div class="setting-row">
+
+            <div class="setting-information">
+                <h3>Notifications</h3>
+                <p>Receive warnings when a risky message is detected</p>
+            </div>
+
+            <div class="setting-action">
+
+                <span
+                        id="notificationPermissionStatus"
+                        class="status-chip status-required">
+
+                    Required
+                </span>
+
+                <button
+                        id="notificationPermissionButton"
+                        class="small-settings-button"
+                        type="button">
+
+                    Allow
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Trusted-contact alert permission -->
+
+        <div class="setting-row">
+
+            <div class="setting-information">
+                <h3>Trusted-contact Alerts</h3>
+                <p>Alert your trusted contact when risk is high</p>
+            </div>
+
+            <div class="setting-action">
+
+                <span
+                        id="alertPermissionStatus"
+                        class="status-chip status-required">
+
+                    Required
+                </span>
+
+                <button
+                        id="alertPermissionButton"
+                        class="small-settings-button"
+                        type="button">
+
+                    Allow
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Trusted contact -->
+
+    <section class="settings-section">
+
+        <div class="section-title">
+
+            <div class="section-icon contact-settings-icon">
+                TC
+            </div>
+
+            <div>
+                <h2>Trusted Contact</h2>
+                <p>Manage the person who receives high-risk alerts</p>
+            </div>
+
+        </div>
+
+        <div class="trusted-contact-summary">
+
+            <div>
+
+                <p class="summary-label">
+                    CURRENT CONTACT
+                </p>
+
+                <h3 id="trustedContactName">
+                    No trusted contact added
+                </h3>
+
+                <p id="trustedContactNumber">
+                    Add a trusted contact to enable alerts.
+                </p>
+
+            </div>
+
+            <a
+                    href="trusted-contact.html"
+                    class="outline-settings-button">
+
+                Add or Change
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Account -->
+
+    <section class="settings-section">
+
+        <div class="section-title">
+
+            <div class="section-icon account-icon">
+                U
+            </div>
+
+            <div>
+                <h2>Account</h2>
+                <p>Your verified Kavach account</p>
+            </div>
+
+        </div>
+
+        <div class="account-details">
+
+            <div>
+
+                <p class="summary-label">
+                    VERIFIED MOBILE NUMBER
+                </p>
+
+                <h3 id="verifiedPhoneNumber">
+                    +91 ••••• ••210
+                </h3>
+
+            </div>
+
+            <span class="verified-chip">
+                Verified
+            </span>
+
+        </div>
+
+        <button
+                id="logoutButton"
+                class="logout-button"
+                type="button">
+
+            Log Out
+        </button>
+
+    </section>
+
+    <!-- About Kavach -->
+
+    <section class="about-card">
+
+        <div class="about-logo">
+            K
+        </div>
+
+        <div>
+
+            <h2>Kavach</h2>
+
+            <h3>
+                Digital safety for senior citizens
+            </h3>
+
+
+        </div>
+
+    </section>
+
+</main>
+<script src="js/setting.js"></script>
+
+</body>
+
+</html>
